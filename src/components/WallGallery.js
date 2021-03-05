@@ -20,21 +20,19 @@ let WallGallery = () => {
 
 
     return(
-        <React.Fragment>
-            {
+        <div className="App">
+            <div className="mydiv">
+                <div className="gallery">
+                {
                 images.map(img=>{
-                                return (
-                                        <div className="gallery">
-                                            <div key={img.id} className="gallery" >
-                                            <img  src={img.urls.regular} alt={img.alt_description}/>
-                                            </div>
-                                        </div>
-                                        )
-                                 })
 
-            }
+                    return <img key={img.id} src={img.urls.regular} alt={img.alt_description} className="item"/>
+                     })
+                }
+                </div>
+            </div>
 
-        </React.Fragment>
+        </div>
     )
 };
 
